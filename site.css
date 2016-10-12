@@ -14,10 +14,6 @@ h6 {
     margin: 0;
     padding: 0;
 }
-.dark-black-bg {
-    background-color: #191919;
-    color: whitesmoke;
-}
 html,
 body {
     width: 100%;
@@ -32,16 +28,26 @@ header nav ul {
 }
 header nav ul li {
     float: left;
-    color:
+    width: calc(100% / 5);
+}
+header nav img {
+    height: 45px;
 }
 body {
     position: relative;
 }
 footer {
     width: 100%;
-    height: 150px;
+    height: 15%;
     position: absolute;
     bottom: 0px;
     left: 0;
     right: 0;
+}
+main {
+    height: 85%;
+}
+.dark-black-bg {
+    background-color: #191919;
+    color: whitesmoke;
 }
