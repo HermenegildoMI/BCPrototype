@@ -3,6 +3,7 @@
 }
 
 /*RESET*/
+
 *,
 h1,
 h2,
@@ -13,41 +14,35 @@ h6 {
     margin: 0;
     padding: 0;
 }
-
-.dark-black-bg{
+.dark-black-bg {
     background-color: #191919;
     color: whitesmoke;
 }
-
-html, body{
+html,
+body {
     width: 100%;
     height: 100%;
 }
-
-header{
+header {
     width: 100%;
     height: 50px;
 }
-
-header nav ul{
+header nav ul {
     list-style: none;
     display: block;
     margin: 0;
 }
-
-header nav ul li{
+header nav ul li {
     float: left;
 }
-
-body{
+body {
     position: relative;
 }
-
-footer{
+footer {
     width: 100%;
     height: 150px;
     position: absolute;
     bottom: 0px;
-    left:0;
+    left: 0;
     right: 0;
 }
