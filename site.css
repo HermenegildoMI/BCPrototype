@@ -1,6 +1,7 @@
-.border {
+    .border {
     border: 1px solid black;
 }
+
 
 /*RESET*/
 
@@ -14,30 +15,62 @@ h6 {
     margin: 0;
     padding: 0;
 }
+
 html,
 body {
     width: 100%;
     height: 100%;
+    font-family: 'Roboto';
 }
+
 header {
     width: 100%;
     height: 50px;
 }
+
+header nav {
+    position: relative;
+    height: 100%;
+}
+
+header nav .right-top-menu {
+    height: 100%;
+    position: relative;
+}
+
 header nav ul {
     list-style: none;
-    display: block;
-    margin: 0;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
 header nav ul li {
     float: left;
     width: calc(100% / 5);
 }
+
+header nav ul li a {
+    color: white;
+    padding: .4em;
+}
+
+header nav ul li a:hover {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
 header nav img {
     height: 45px;
 }
+
 body {
     position: relative;
 }
+
 footer {
     width: 100%;
     height: 15%;
@@ -46,35 +79,128 @@ footer {
     left: 0;
     right: 0;
 }
+
 main {
     height: 85%;
 }
+
 .dark-black-bg {
     background-color: #191919;
     color: whitesmoke;
 }
 
 .img-section-holder {
-	width: calc(100% / 5);
+    width: calc(100% / 5);
     float: left;
     height: 100%;
     border: 1px solid;
 }
 
-main.container-fluid{
-    height: calc(100% - 15% - 50px); /*height  - footer - header*/
+main.container-fluid {
+    height: calc(100% - 15% - 50px);
+    /*height  - footer - header*/
 }
 
-main.container-fluid .main-row{
+main.container-fluid .main-row {
     height: 100%;
 }
 
-main.container-fluid .content-heading{
+main.container-fluid .content-heading {
     height: 15%;
+    position: relative;
 }
 
-main.container-fluid .content-body{
+main.container-fluid .content-heading section {
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+main.container-fluid .content-body {
     height: 85%;
 }
 
+main.container-fluid .content-heading section col-lg-4 {}
+
+footer nav {
+    width: 100%;
+    height: 100%;
+}
+
+footer nav ul {
+    list-style: none;
+    display: block;
+    width: 100%;
+    float: left;
+    margin: 0;
+}
+
+footer nav ul li {
+    float: left;
+    width: calc(100% / 5);
+    padding: 1em;
+    font-size: 1.3em;
+}
+
+footer nav ul li a {
+    color: whitesmoke;
+    font-weight: 400;
+    padding: .5em;
+}
+
+footer nav ul li a:hover {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+footer nav ul li p {
+    color: darkgrey;
+    font-size: .8em;
+    margin-left: 2ch;
+    padding-top: 1em;
+    width: calc(100% - 2ch);
+}
+
+#holder-1 {
+    background: url(images/BC_0075%20copy.jpg) no-repeat center ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#holder-2 {
+    background: url(images/BC_006.jpg) no-repeat center ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#holder-4 {
+    background: url(images/BC_00153%20copya.jpg) no-repeat center ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#holder-3 {
+    background: url(images/BC_0062.jpg) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#holder-5 {
+    background: url(images/BC_0073.jpg) no-repeat center ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
