@@ -53,28 +53,30 @@ main {
     background-color: #191919;
     color: whitesmoke;
 }
-
 .img-section-holder {
-	width: calc(100% / 5);
+    width: calc(100% / 5);
     float: left;
     height: 100%;
     border: 1px solid;
 }
-
-main.container-fluid{
-    height: calc(100% - 15% - 50px); /*height  - footer - header*/
+main.container-fluid {
+    height: calc(100% - (15% + 50px));
+    /*height  - footer - header*/
 }
-
-main.container-fluid .main-row{
+main.container-fluid .main-row {
     height: 100%;
 }
-
-main.container-fluid .content-heading{
+main.container-fluid .content-heading {
     height: 15%;
 }
-
-main.container-fluid .content-body{
+main.container-fluid .content-body {
     height: 85%;
 }
-
-
+.vertical-parent {
+    height: 100%;
+    display: flex;
+}
+.vertical-child {
+    height: 100%;
+    margin: auto;
+}
