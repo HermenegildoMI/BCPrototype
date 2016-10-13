@@ -42,7 +42,7 @@
     }
     header nav ul li {
         float: left;
-        width: calc(100% / 12);
+        width: calc(100% / 6);
         text-align: center;
     }
     header nav ul li a {
@@ -102,6 +102,9 @@
     }
     .content-heading-text h1 {
         font-family: 'fancy-fat';
+    }
+    .content-heading-text i {
+        padding: 0.5em;
     }
     main.container-fluid .content-body {
         height: 85%;
@@ -166,6 +169,22 @@
         width: calc(100% - 20%);
         height: 100%;
         background-color: whitesmoke;
+        background-image: url(images/BC_00136.jpg);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 3em;
+        overflow-y: scroll
+    }
+    .context-inner-main section {
+        /*        background-color: rgba(245, 245, 245, 0.9);*/
+        background-color: rgba(25, 25, 25, 0.8);
+        color: whitesmoke;
+        padding: 3em;
+        margin-top: 7em;
+    }
+    .context-inner-main a {
+        color: rgba(255, 225, 49, 0.9);
     }
     .dark-black-bg {
         background-color: #191919;
