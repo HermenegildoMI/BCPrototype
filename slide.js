@@ -28,14 +28,14 @@
         var pageViewFn = {
             //page view
             'homePageFn': function () {
-                this.__showPage('Belgium Campus IT Varsity');
+                this.__showPage('Belgium Campus ITversity');
             },
             'aboutPageFn': function () {
                 this.__showPage('ABOUT');
                 this.__changeBg('images/BC_0075%20copy.jpg');
             },
             'studyPageFn': function () {
-                this.__showPage('STUDY @ BC'); //images/BC_006.jpg
+                this.__showPage('STUDY@BC'); //images/BC_006.jpg
                 this.__changeBg('/images/BC_006.jpg');
 
             },
@@ -45,7 +45,7 @@
 
             },
             'innovatePageFn': function () {
-                this.__showPage('INNOVATE');
+                this.__showPage('INNOVATE@BC');
                 this.__changeBg('images/BC_00153%20copya.jpg');
             },
             'campusPageFn': function () {

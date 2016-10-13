@@ -1,5 +1,10 @@
-    .border {
-        border: 1px solid black;
+    @font-face {
+        font-family: 'fancy-fat';
+        src: url("fonts/AvantGardeDemi.ttf") format("truetype");
+    }
+    @font-face {
+        font-family: 'fancy';
+        src: url("fonts/AvantGarde.ttf") format("truetype");
     }
     /*RESET*/
     
@@ -13,62 +18,60 @@
         margin: 0;
         padding: 0;
     }
-    
     html,
     body {
         width: 100%;
         height: 100%;
-        font-family: 'Roboto';
+        font-family: 'Calibri', 'Roboto';
     }
-    
     header {
         width: 100%;
-        height: 50px;
+        height: 75px;
     }
-    
     header nav {
         position: relative;
         height: 100%;
     }
-    
     header nav .right-top-menu {
         height: 100%;
-        position: relative;
     }
-    
     header nav ul {
         list-style: none;
-        position: absolute;
         width: 100%;
         right: 0;
-        top: 50%;
-        transform: translateY(-50%);
     }
-    
     header nav ul li {
         float: left;
-        width: calc(100% / 5);
+        width: calc(100% / 12);
+        text-align: center;
     }
-    
     header nav ul li a {
         color: white;
         padding: .4em;
     }
-    
     header nav ul li a:hover {
         color: white;
         text-decoration: none;
         border-bottom: 1px solid;
     }
-    
-    header nav img {
-        height: 45px;
+    footer nav ul li a:focus {
+        /*        color: rgba(255, 225, 49, 0.9);*/
+        color: white;
+        text-decoration: none;
+        /*        border-bottom: 1px solid;*/
     }
-    
+    header nav #bc-crest {
+        height: 60px;
+    }
+    header nav #bc-text {
+        height: 30px;
+    }
+    header nav img {
+        height: 25px;
+    }
     body {
         position: relative;
     }
-    
     footer {
         width: 100%;
         height: 15%;
@@ -77,137 +80,75 @@
         left: 0;
         right: 0;
     }
-    
     main {
         height: 85%;
     }
-    
-    .dark-black-bg {
-        background-color: #191919;
-        color: whitesmoke;
-    }
-    
-    .img-section-holder {
-        width: calc(100% / 5);
-        float: left;
-        height: 100%;
-        z-index: 1;
-    }
-    
-    .img-context-holder {
-        width: calc(100% / 6);
-        float: left;
-        height: 100%;
-    }
-    
     main.container-fluid {
-        height: calc(100% - 15% - 50px);
+        height: calc(100% - 15% - 75px);
         /*height  - footer - header*/
     }
-    
     main.container-fluid .main-row {
         height: 100%;
     }
-    
     main.container-fluid .content-heading {
         height: 15%;
-        position: relative;
     }
-    
     main.container-fluid .content-heading section {
         width: 100%;
         display: inline-block;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
     }
-    
+    .content-heading-text img {
+        height: 50px
+    }
+    .content-heading-text h1 {
+        font-family: 'fancy-fat';
+    }
     main.container-fluid .content-body {
         height: 85%;
         position: relative;
         overflow-y: hidden;
     }
-    
     footer nav {
         width: 100%;
         height: 100%;
+        padding: 0px;
     }
-    
     footer nav ul {
         list-style: none;
         display: block;
         width: 100%;
         float: left;
         margin: 0;
+        padding: 0px;
     }
-    
     footer nav ul li {
         float: left;
         width: calc(100% / 5);
-        padding: 1em;
+        padding-top: 0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
         font-size: 1.3em;
     }
-    
     footer nav ul li a {
         color: whitesmoke;
         font-weight: 400;
         padding: .5em;
+        font-family: 'fancy';
     }
-    
     footer nav ul li a:hover {
         color: white;
         text-decoration: none;
         border-bottom: 1px solid;
     }
-    
     footer nav ul li p {
         color: darkgrey;
         font-size: .8em;
         margin-left: 2ch;
         padding-top: 1em;
+        padding: 0px;
         width: calc(100% - 2ch);
+        margin-top: 10px;
     }
-    
-    #holder-1 {
-        background: url(images/BC_0075%20copy.jpg) no-repeat center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-    
-    #holder-2 {
-        background: url(images/BC_006.jpg) no-repeat center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-    
-    #holder-4 {
-        background: url(images/BC_00153%20copya.jpg) no-repeat center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-    
-    #holder-3 {
-        background: url(images/BC_0062.jpg) no-repeat center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-    
-    #holder-5 {
-        background: url(images/BC_0073.jpg) no-repeat center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-    
     .context {
         z-index: 2;
         position: absolute;
@@ -217,39 +158,97 @@
         bottom: -100%;
         animation: menu-slide-down 1s ease;
     }
-    
     .context .container-fluid .context-inner-box {
+        height: 100%;
+    }
+    .context-inner-main {
+        float: left;
+        width: calc(100% - 20%);
+        height: 100%;
+        background-color: whitesmoke;
+    }
+    .dark-black-bg {
+        background-color: #191919;
+        color: whitesmoke;
+    }
+    .img-section-holder {
+        width: calc(100% / 5);
+        float: left;
+        height: 100%;
+        z-index: 1;
+    }
+    .img-context-holder {
+        width: calc(100% / 5);
+        float: left;
         height: 100%;
     }
     /*HELPER CLASSES*/
     
+    .vertical-parent {
+        position: relative;
+        height: 100%;
+    }
+    .vertical-child {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
     .full-height {
         height: 100%;
     }
-    
     .menu-show {
         bottom: 0 !important;
         animation: menu-slide-up 1s ease;
     }
-    
     .menu-hide {
         bottom: -100%;
         animation: menu-slide-down 2s ease;
     }
-    
     .yellow-bg-wall {
         height: 100%;
         width: 100%;
         background-color: rgba(255, 225, 49, 0.9);
+        color: white;
     }
-
+    .border {
+        border: 1px solid black;
+    }
     /*END HELPER CLASSES*/
     
-    .context-inner-main {
-        float: left;
-        width: calc(100% - (100% / 6));
-        height: 100%;
-        background-color: whitesmoke;
+    #holder-1 {
+        background: url(images/BC_0075%20copy.jpg) no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    #holder-2 {
+        background: url(images/BC_006.jpg) no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    #holder-4 {
+        background: url(images/BC_00153%20copya.jpg) no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    #holder-3 {
+        background: url(images/BC_0062.jpg) no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    #holder-5 {
+        background: url(images/BC_0073.jpg) no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
     /*KEYFRAMES*/
     
@@ -261,7 +260,6 @@
             bottom: 0;
         }
     }
-    
     @keyframes menu-slide-down {
         0% {
             bottom: 0;
