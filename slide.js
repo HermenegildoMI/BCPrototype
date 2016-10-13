@@ -66,6 +66,12 @@
         window.location.hash = '';
 
         $('body').on('click', 'a', function () {
+            var isParent = $(this).data('parent');
+            if(isParent){
+                $(this).parent().find('ul').toggleClass('hide-menu show-menu');
+                return;
+            }
+            
             setTimeout(function () {
                 var hasClass = $('.context').hasClass('menu-show');
                 if (!hasClass) urlRender.render(decodeURI(window.location.hash));
