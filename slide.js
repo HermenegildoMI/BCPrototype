@@ -76,25 +76,28 @@
 
         $('body').on('click', 'a', function () {
             //sidebar menu animations
-            var isParent = $(this).data('parent');
-            if (isParent) {
-                $(this).parent().find('ul').toggleClass('hide-menu show-menu');
-            }
+
             //navigation content 
-            $('.container-content').hide()
+            $('.container-content').hide();
             var content = $(this).data('id');
             $("#" + content).show();
             if (content.includes("top")) {
                 $('.context').toggleClass('top-menu-show');
             }
 
-            setTimeout(function () {
-                var hasClass = $('.context').hasClass('menu-show');
-                if (!hasClass) urlRender.render(decodeURI(window.location.hash));
-                $('.context').toggleClass('menu-show');
-                $('.content-heading section').toggleClass('yellow-section-change');
-            }, 0)
-
+            var isParent = $(this).data('parent');
+            var href = $(this).attr('href');
+            if (isParent) {
+                $(this).parent().find('ul').toggleClass('hide-menu show-menu');
+                return;
+            } else if (href.length > 1) {
+                setTimeout(function () {
+                    var hasClass = $('.context').hasClass('menu-show');
+                    if (!hasClass) urlRender.render(decodeURI(window.location.hash));
+                    $('.context').toggleClass('menu-show');
+                    $('.content-heading section').toggleClass('yellow-section-change');
+                }, 0)
+            }
         });
     });
 
