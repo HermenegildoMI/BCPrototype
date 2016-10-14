@@ -67,11 +67,14 @@
 
         $('body').on('click', 'a', function () {
             var isParent = $(this).data('parent');
-            if(isParent){
+            if (isParent) {
                 $(this).parent().find('ul').toggleClass('hide-menu show-menu');
-                return;
             }
-            
+            //navigation content 
+            $('.container-content').hide()
+            var content = $(this).data('id');
+            $("#" + content).show();
+
             setTimeout(function () {
                 var hasClass = $('.context').hasClass('menu-show');
                 if (!hasClass) urlRender.render(decodeURI(window.location.hash));
