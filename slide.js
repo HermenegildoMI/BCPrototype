@@ -84,6 +84,7 @@
             $('.container-content').hide()
             var content = $(this).data('id');
             $("#" + content).show();
+            console.log(content);
             if (content.includes("top")) {
                 $('.context').toggleClass('top-menu-show');
             }
