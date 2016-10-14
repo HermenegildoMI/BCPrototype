@@ -512,6 +512,23 @@ footer nav ul li p {
     color: rgba(255, 225, 49, 0.9);
 }
 
+#top-apply-main {
+    background-image: url(images/BC_00136.jpg);
+    background-size: cover;
+    height: 100%;
+    padding: 2em;
+    overflow-y: scroll;
+}
+#top-apply-main section {
+    background-color: rgba(25, 25, 25, 0.8);
+    color: whitesmoke;
+    padding: 2em;
+    overflow-y: hidden;
+}
+#top-apply-main a {
+    color: rgba(255, 225, 49, 0.9);
+}
+
 /*KEYFRAMES*/
 
 @keyframes menu-slide-up {
