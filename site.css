@@ -162,7 +162,6 @@ footer nav ul li p {
     height: 100%;
     width: 100%;
     bottom: -100%;
-    animation: menu-slide-down 1s ease;
 }
 .context .container-fluid .context-inner-box {
     height: 100%;
@@ -170,6 +169,12 @@ footer nav ul li p {
 
 /*HELPER CLASSES*/
 
+.context-slide-down {
+    animation: menu-slide-down 1s ease;
+}
+.context-slide-up {
+    animation: menu-slide-up 1s ease;
+}
 .vertical-parent {
     position: relative;
     height: 100%;
@@ -257,24 +262,21 @@ footer nav ul li p {
     width: calc(100% - 20%);
     height: 100%;
     background-color: whitesmoke;
-    background-image: url(images/BC_00136.jpg);
+    /*    background-image: url(images/BC_00136.jpg);*/
     background-size: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 3em;
-                overflow-y: scroll
             }
             
             .context-inner-main section {
                 /*        background-color: rgba(245, 245, 245, 0.9);*/
-                background-color: rgba(25, 25, 25, 0.8);
-                color: whitesmoke;
-                padding: 3em;
-                margin-top: 7em;
             }
-            
-            .context-inner-main a {
+.context-inner-main a:hover {
                 color: rgba(255, 225, 49, 0.9);
+    cursor: pointer;
+}
+.context-inner-main a {
+    color: rgba(25, 25, 25, 0.5);
 }
 .dark-black-bg {
     background-color: #191919;
@@ -449,6 +451,48 @@ footer nav ul li p {
     /* Fx 5+ */
     -o-animation: nav-slide-up 1s ease-out;
     width: calc(100% - 20%);
+}
+.col-4 {
+    column-count: 4;
+    margin-bottom: 2em;
+}
+#study-main {
+    padding: 2em;
+    overflow-y: scroll;
+}
+#study-main img {
+    width: 50%;
+    height: 250px;
+    column-count: 0;
+    object-fit: cover;
+    margin-bottom: 1em;
+}
+#campus-life-main {
+    padding: 2em;
+    overflow-y: scroll;
+}
+#campus-life-main section {
+    column-count: 4;
+}
+#campus-life-main img {
+    width: 100%;
+    object-fit: contain;
+}
+#about-main {
+    background-image: url(images/BC_00136.jpg);
+    background-size: cover;
+    height: 100%;
+    padding: 2em;
+    overflow-y: scroll;
+}
+#about-main section {
+    background-color: rgba(25, 25, 25, 0.8);
+    color: whitesmoke;
+    padding: 2em;
+    overflow-y: hidden;
+}
+#about-main a {
+    color: rgba(255, 225, 49, 0.9);
 }
 
 /*KEYFRAMES*/
