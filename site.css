@@ -43,7 +43,7 @@ header nav ul {
 }
 header nav ul li {
     float: left;
-    width: calc(100% / 6);
+        width: calc(100% / 6);
     text-align: center;
 }
 header nav ul li a {
@@ -104,9 +104,11 @@ main.container-fluid .content-heading section {
 .content-heading-text h1 {
     font-family: 'fancy-fat';
 }
-.content-heading-text i {
-    padding: 0.5em;
-}
+            
+            .content-heading-text i {
+                padding: 0.5em;
+            }
+            
 main.container-fluid .content-body {
     height: 90%;
     position: relative;
@@ -260,17 +262,19 @@ footer nav ul li p {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 3em;
-    overflow-y: scroll
-}
-.context-inner-main section {
-    /*        background-color: rgba(245, 245, 245, 0.9);*/
-    background-color: rgba(25, 25, 25, 0.8);
-    color: whitesmoke;
-    padding: 3em;
-    margin-top: 7em;
-}
-.context-inner-main a {
-    color: rgba(255, 225, 49, 0.9);
+                overflow-y: scroll
+            }
+            
+            .context-inner-main section {
+                /*        background-color: rgba(245, 245, 245, 0.9);*/
+                background-color: rgba(25, 25, 25, 0.8);
+                color: whitesmoke;
+                padding: 3em;
+                margin-top: 7em;
+            }
+            
+            .context-inner-main a {
+                color: rgba(255, 225, 49, 0.9);
 }
 .dark-black-bg {
     background-color: #191919;
@@ -335,6 +339,27 @@ footer nav ul li p {
     border:0px;
 }
 
+
+            
+            .image-container {
+                position: relative;
+                display: block;
+                padding: .5em;
+                width: calc(100% / 4);
+                float: left;
+                text-align: center;
+            }
+            
+            .image-container img {
+                margin-bottom: .2em;
+            }
+            
+            .image-container b,
+            .image-container em {
+                width: 100%;
+                display: block;
+            }
+
 /*END HELPER CLASSES*/
 
 #holder-1 {
@@ -393,6 +418,27 @@ footer nav ul li p {
     -o-background-size: cover;
     background-size: cover;
 }
+            
+            #about-article,
+            #about-article-2 {
+                background-color: whitesmoke;
+            }
+            
+            #about-article-2 {
+                min-height: 100%;
+            }
+            
+            #about-article-2 ul {
+                list-style: none;
+            }
+            
+            #about-article section,
+            #about-article-2 section {
+                background: none;
+                color: #191919;
+                margin: 0;
+            }
+            /*            blockquote {border-left: 5px solid rgba(255, 225, 49, 1); }*/
 .hide-menu {
     height: auto;
     max-height: 0px;
