@@ -76,6 +76,7 @@
                 var hasClass = $('.context').hasClass('menu-show');
                 if (!hasClass) urlRender.render(decodeURI(window.location.hash));
                 $('.context').toggleClass('menu-show');
+                $('.content-heading section').toggleClass('yellow-section-change');
             }, 0)
 
         });

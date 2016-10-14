@@ -110,7 +110,7 @@
             }
             
             main.container-fluid .content-heading {
-                height: 15%;
+                height: 10%;
             }
             
             main.container-fluid .content-heading section {
@@ -127,7 +127,7 @@
             }
             
             main.container-fluid .content-body {
-                height: 85%;
+                height: 90%;
                 position: relative;
                 overflow-y: hidden;
             }
@@ -172,10 +172,10 @@
             footer nav ul li p {
                 color: darkgrey;
                 font-size: .8em;
-                margin-left: 2ch;
+                margin-left: 1ch;
                 padding-top: 1em;
                 padding: 0px;
-                width: calc(100% - 2ch);
+                width: calc(100%);
                 margin-top: 10px;
             }
             
@@ -210,7 +210,7 @@
             }
             
             .img-1 {
-                background: url(images/_MG_1745%20copy.jpg) no-repeat center center;
+                background: url(images/BC_00136.jpg) no-repeat center center;
             }
             
             .cover {
@@ -233,7 +233,7 @@
             .yellow-bg-wall {
                 height: 100%;
                 width: 100%;
-                background-color: rgba(255, 225, 49, 0.8);
+                /*                background-color: rgba(255, 225, 49, 0.8);*/
                 background-color: rgba(0, 0, 0, 0.7);
             }
             
@@ -249,17 +249,19 @@
             
             .yellow-bg-wall nav ul li {
                 padding: 1em;
+                padding-left: 2em;
                 position: relative;
             }
             
             .yellow-bg-wall nav ul li:nth-child(odd) {
+                /*                background-color: rgba(255, 225, 49, 0.8);*/
                 /*        background-color: rgba(0, 0, 0, 0.2);*/
             }
             
             .yellow-bg-wall nav ul li a {
                 color: white;
                 font-weight: bold;
-                padding: .2em;
+                padding: .5em;
             }
             
             .border {
@@ -269,6 +271,15 @@
             .yellow-bg-wall nav ul li a:hover {
                 text-decoration: none;
                 border-bottom: 1px solid;
+            }
+            
+            .yellow-bg-wall nav ul li li a:hover {
+                text-decoration: none;
+                border-bottom: 1px solid;
+            }
+            
+            .yellow-bg-wall nav ul li a:visted {
+                text-decoration: none;
             }
             
             .context .container-fluid .context-inner-box {
@@ -301,6 +312,12 @@
             }
             /*HELPER CLASSES*/
             
+            .yellow-section-change {
+                background-color: rgba(255, 225, 49, 0.9);
+                color: white;
+                animation: yellow-animation 1s;
+            }
+            
             .vertical-parent {
                 position: relative;
                 height: 100%;
@@ -329,7 +346,7 @@
             .yellow-bg-wall {
                 height: 100%;
                 width: 100%;
-                background-color: rgba(255, 225, 49, 0.9);
+                /*                background-color: rgba(255, 225, 49, 0.9);*/
                 color: white;
             }
             
@@ -457,6 +474,28 @@
                 }
                 100% {
                     max-height: 0px;
+                }
+            }
+            
+            @keyframes yellow-animation {
+                0% {
+                    background-color: white;
+                    color: black;
+                }
+                100% {
+                    background-color: rgba(255, 225, 49, 0.9);
+                    color: white;
+                }
+            }
+            
+            @keyframes yellow-leave {
+                0% {
+                    background-color: rgba(255, 225, 49, 0.9);
+                    color: white;
+                }
+                100% {
+                    background-color: white;
+                    color: black;
                 }
             }
             /*END KEYFRAMES*/
