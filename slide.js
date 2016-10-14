@@ -25,6 +25,7 @@
             'campus-life': 'campusPageFn',
             'news': 'newsPageFn',
             'media': 'mediaPageFn',
+            'apply': 'applyPageFn',
             'redirect': 'homePageFn'
         }
         var pageViewFn = {
@@ -59,6 +60,10 @@
             },
             'mediaPageFn': function () {
                 this.__showPage('MEDIA');
+                this.__changeBg('images/BC_00153%20copya.jpg');
+            },
+            'applyPageFn': function () {
+                this.__showPage('APPLY');
                 this.__changeBg('images/BC_00153%20copya.jpg');
             },
             __showPage: function (page) {
@@ -99,6 +104,8 @@
             }, 0)
 
         });
+        
+        
     });
 
 })();
