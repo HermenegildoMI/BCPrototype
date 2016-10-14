@@ -78,15 +78,14 @@
     var urlRender = new UrlRender();
     $(document).ready(function () {
         window.location.hash = '';
-
         $('body').on('click', 'a', function () {
-            //sidebar menu animations
-
-            //navigation content 
+            
+            var hasClass = $('.context').hasClass('menu-show');
+            
             $('.container-content').hide();
             var content = $(this).data('id');
             $("#" + content).show();
-            console.log(content);
+
             if (content.includes("top")) {
                 $('.context').toggleClass('top-menu-show');
             }
@@ -96,19 +95,18 @@
             if (isParent) {
                 $(this).parent().find('ul').toggleClass('hide-menu show-menu');
                 return;
-            } else if (href.length > 1) {
-                setTimeout(function () {
-                    var hasClass = $('.context').hasClass('menu-show');
-                    if (!hasClass) urlRender.render(decodeURI(window.location.hash));
-                else urlRender.render('');
-                    $('.context').toggleClass('menu-show');
-                    $('.content-heading section').toggleClass('yellow-section-change');
-
-                }, 0)
             }
+            
+            setTimeout(function () {
+                var hasClass = $('.context').hasClass('menu-show');
+                if (!hasClass) urlRender.render(decodeURI(window.location.hash));
+                else urlRender.render('');
+                $('.context').toggleClass('menu-show');
+                $('.content-heading section').toggleClass('yellow-section-change');
+            }, 0);
         });
-        
-        
+
+
     });
 
 })();

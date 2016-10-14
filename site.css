@@ -204,9 +204,11 @@ footer nav ul li p {
 .context-slide-down {
     animation: menu-slide-down 1s ease;
 }
+
 .context-slide-up {
     animation: menu-slide-up 1s ease;
 }
+
 .vertical-parent {
     position: relative;
     height: 100%;
@@ -318,19 +320,14 @@ footer nav ul li p {
     background-size: 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-y: overlay;
 }
 
-.context-inner-main section {
-    /*        background-color: rgba(245, 245, 245, 0.9);*/
-    background-color: rgba(25, 25, 25, 0.8);
-    color: whitesmoke;
-    padding: 3em;
-    margin-top: 7em;
-}
 .context-inner-main a:hover {
     color: rgba(255, 225, 49, 0.9);
     cursor: pointer;
 }
+
 .context-inner-main a {
     color: rgba(25, 25, 25, 0.5);
 }
@@ -397,16 +394,13 @@ footer nav ul li p {
 }
 
 .yellow-btn {
-    
     background-color: rgba(255, 225, 49, 0.9);
     padding-left: 30px;
     padding-right: 30px;
     color: white;
-    border:0px;
+    border: 0px;
 }
 
-
-            
 .image-container {
     position: relative;
     display: block;
@@ -495,8 +489,9 @@ footer nav ul li p {
 
 #about-article,
 #about-article-2 {
-/*    background-color: rgba(245,245,245,0.9);*/
+    /*    background-color: rgba(245,245,245,0.9);*/
     background-color: whitesmoke;
+    overflow-y: auto;
 }
 
 #about-article-2 {
@@ -528,14 +523,17 @@ footer nav ul li p {
     -o-animation: nav-slide-up 1s ease-out;
     width: calc(100% - 20%);
 }
+
 .col-4 {
     column-count: 4;
     margin-bottom: 2em;
 }
+
 #study-main {
     padding: 2em;
     overflow-y: scroll;
 }
+
 #study-main img {
     width: 50%;
     height: 250px;
@@ -543,30 +541,36 @@ footer nav ul li p {
     object-fit: cover;
     margin-bottom: 1em;
 }
+
 #campus-life-main {
     padding: 2em;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
+
 #campus-life-main section {
     column-count: 4;
 }
+
 #campus-life-main img {
     width: 100%;
     object-fit: contain;
 }
+
 #about-main {
     background-image: url(images/BC_00136.jpg);
     background-size: cover;
     height: 100%;
     padding: 2em;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
+
 #about-main section {
     background-color: rgba(25, 25, 25, 0.8);
     color: whitesmoke;
     padding: 2em;
     overflow-y: hidden;
 }
+
 #about-main a {
     color: rgba(255, 225, 49, 0.9);
 }
@@ -578,12 +582,14 @@ footer nav ul li p {
     padding: 2em;
     overflow-y: scroll;
 }
+
 #top-media-main section {
     background-color: rgba(25, 25, 25, 0.8);
     color: whitesmoke;
     padding: 2em;
     overflow-y: hidden;
 }
+
 #top-media-main a {
     color: rgba(255, 225, 49, 0.9);
 }
@@ -595,12 +601,13 @@ footer nav ul li p {
     padding: 2em;
     overflow-y: scroll;
 }
+
 #top-apply-main section {
     background-color: rgba(25, 25, 25, 0.8);
     color: whitesmoke;
     padding: 2em;
-    overflow-y: hidden;
 }
+
 #top-apply-main a {
     color: rgba(255, 225, 49, 0.9);
 }
