@@ -25,6 +25,7 @@
             'campus-life': 'campusPageFn',
             'news': 'newsPageFn',
             'media': 'mediaPageFn',
+            'apply': 'applyPageFn',
             'redirect': 'homePageFn'
         }
         var pageViewFn = {
@@ -61,6 +62,10 @@
                 this.__showPage('MEDIA');
                 this.__changeBg('images/BC_00153%20copya.jpg');
             },
+            'applyPageFn': function () {
+                this.__showPage('APPLY');
+                this.__changeBg('images/BC_00153%20copya.jpg');
+            },
             __showPage: function (page) {
                 $('.content-heading-text h1').first().html(page);
             },
@@ -81,6 +86,7 @@
             $('.container-content').hide();
             var content = $(this).data('id');
             $("#" + content).show();
+            console.log(content);
             if (content.includes("top")) {
                 $('.context').toggleClass('top-menu-show');
             }
@@ -94,11 +100,15 @@
                 setTimeout(function () {
                     var hasClass = $('.context').hasClass('menu-show');
                     if (!hasClass) urlRender.render(decodeURI(window.location.hash));
+                else urlRender.render('');
                     $('.context').toggleClass('menu-show');
                     $('.content-heading section').toggleClass('yellow-section-change');
+
                 }, 0)
             }
         });
+        
+        
     });
 
 })();
