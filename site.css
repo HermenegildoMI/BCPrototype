@@ -65,7 +65,11 @@ header nav ul li a:hover {
     text-decoration: none;
     border-bottom: 1px solid;
 }
-
+header nav ul li a:focus {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
 footer nav ul li a:focus {
     /*        color: rgba(255, 225, 49, 0.9);*/
     color: white;
@@ -323,6 +327,9 @@ footer nav ul li p {
     overflow-y: overlay;
 }
 
+.context-inner-main section {
+    /*        background-color: rgba(245, 245, 245, 0.9);*/
+}
 .context-inner-main a:hover {
     color: rgba(255, 225, 49, 0.9);
     cursor: pointer;
@@ -358,7 +365,6 @@ footer nav ul li p {
     color: white;
     animation: yellow-animation 1s;
 }
-
 .vertical-parent {
     position: relative;
     height: 100%;
@@ -384,15 +390,12 @@ footer nav ul li p {
 .border {
     border: 1px solid black;
 }
-
 .padding-top-small {
     padding-top: 30px;
 }
-
 .no-border-radius {
     border-radius: 0px;
 }
-
 .yellow-btn {
     background-color: rgba(255, 225, 49, 0.9);
     padding-left: 30px;
@@ -400,7 +403,6 @@ footer nav ul li p {
     color: white;
     border: 0px;
 }
-
 .image-container {
     position: relative;
     display: block;
@@ -486,7 +488,6 @@ footer nav ul li p {
     -o-background-size: cover;
     background-size: cover;
 }
-
 #about-article,
 #about-article-2 {
     /*    background-color: rgba(245,245,245,0.9);*/
@@ -497,7 +498,6 @@ footer nav ul li p {
 #about-article-2 {
     min-height: 100%;
 }
-
 #about-article-2 ul {
     list-style: none;
 }
@@ -574,7 +574,6 @@ footer nav ul li p {
 #about-main a {
     color: rgba(255, 225, 49, 0.9);
 }
-
 #top-media-main {
     background-image: url(images/BC_00136.jpg);
     background-size: cover;
@@ -593,7 +592,6 @@ footer nav ul li p {
 #top-media-main a {
     color: rgba(255, 225, 49, 0.9);
 }
-
 #top-apply-main {
     background-image: url(images/BC_00136.jpg);
     background-size: cover;
