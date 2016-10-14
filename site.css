@@ -197,6 +197,14 @@ footer nav ul li p {
     bottom: -100%;
     animation: menu-slide-down 2s ease;
 }
+.top-menu-show {
+    bottom: 0 !important;
+    animation: top-menu-slide-up 1s ease;
+}
+.top-menu-hide {
+    bottom: -100%;
+    animation: top-menu-slide-down 2s ease;
+}
 .yellow-bg-wall {
     height: 100%;
     width: 100%;
@@ -299,14 +307,6 @@ footer nav ul li p {
 .full-height {
     height: 100%;
 }
-.menu-show {
-    bottom: 0;
-    animation: menu-slide-up 1s ease;
-}
-.menu-hide {
-    bottom: -100%;
-    animation: menu-slide-down 2s ease;
-}
 .yellow-bg-wall {
     height: 100%;
     width: 100%;
@@ -403,6 +403,22 @@ footer nav ul li p {
     }
     100% {
         bottom: -100%;
+    }
+}
+@keyframes top-menu-slide-down {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -100%;
+    }
+}
+@keyframes top-menu-slide-up {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0;
     }
 }
 @keyframes highlight-anchor {
