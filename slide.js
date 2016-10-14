@@ -17,18 +17,20 @@
         }
         var urlMap = {
             //url : pageViewFn
-            'Home': 'homePageFn',
-            'About': 'aboutPageFn',
-            'Study@BC': 'studyPageFn',
-            'ContactUs': 'contactPageFn',
-            'Innovate': 'innovatePageFn',
-            'CampusLife': 'campusPageFn',
+            'home': 'homePageFn',
+            'about': 'aboutPageFn',
+            'study': 'studyPageFn',
+            'contact-us': 'contactPageFn',
+            'innovate': 'innovatePageFn',
+            'campus-life': 'campusPageFn',
+            'news': 'newsPageFn',
+            'media': 'mediaPageFn',
             'redirect': 'homePageFn'
         }
         var pageViewFn = {
             //page view
             'homePageFn': function () {
-                this.__showPage('Belgium Campus ITversity');
+                this.__showPage('BC');
             },
             'aboutPageFn': function () {
                 this.__showPage('ABOUT');
@@ -37,7 +39,6 @@
             'studyPageFn': function () {
                 this.__showPage('STUDY@BC'); //images/BC_006.jpg
                 this.__changeBg('/images/BC_006.jpg');
-
             },
             'contactPageFn': function () {
                 this.__showPage('CONTACT US');
@@ -51,6 +52,14 @@
             'campusPageFn': function () {
                 this.__showPage('CAMPUS LIFE');
                 this.__changeBg('images/BC_0062.jpg');
+            },
+            'newsPageFn': function () {
+                this.__showPage('NEWS');
+                this.__changeBg('images/BC_00153%20copya.jpg');
+            },
+            'mediaPageFn': function () {
+                this.__showPage('MEDIA');
+                this.__changeBg('images/BC_00153%20copya.jpg');
             },
             __showPage: function (page) {
                 $('.content-heading-text h1').first().html(page);
@@ -66,12 +75,19 @@
         window.location.hash = '';
 
         $('body').on('click', 'a', function () {
+            //sidebar menu animations
             var isParent = $(this).data('parent');
-            if(isParent){
+            if (isParent) {
                 $(this).parent().find('ul').toggleClass('hide-menu show-menu');
-                return;
             }
-            
+            //navigation content 
+            $('.container-content').hide()
+            var content = $(this).data('id');
+            $("#" + content).show();
+            if (content.includes("top")) {
+                $('.context').toggleClass('top-menu-show');
+            }
+
             setTimeout(function () {
                 var hasClass = $('.context').hasClass('menu-show');
                 if (!hasClass) urlRender.render(decodeURI(window.location.hash));
