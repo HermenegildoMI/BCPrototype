@@ -295,6 +295,7 @@ footer nav ul li p {
     color: white;
     animation: yellow-animation 1s;
 }
+
 .vertical-parent {
     position: relative;
     height: 100%;
@@ -315,6 +316,23 @@ footer nav ul li p {
 }
 .border {
     border: 1px solid black;
+}
+
+.padding-top-small {
+    padding-top: 30px;
+}
+
+.no-border-radius {
+    border-radius: 0px;
+}
+
+.yellow-btn {
+    
+    background-color: rgba(255, 225, 49, 0.9);
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    border:0px;
 }
 
 /*END HELPER CLASSES*/
